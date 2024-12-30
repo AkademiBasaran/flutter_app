@@ -45,11 +45,50 @@ class LoginPage extends StatelessWidget {
               height: 35.0,
             ),
             Container(
-              alignment: Alignment.topRight,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      const Color.fromARGB(255, 215, 107, 235),
+                      const Color.fromARGB(255, 4, 104, 129),
+                    ]),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              alignment: Alignment.center,
               width: MediaQuery.of(context).size.width - 70.0,
               height: 180.0,
-              color: Colors.white,
-              child:Text("ali")
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      height: 52.0,
+                      decoration: BoxDecoration(
+                        color: Colors.purple,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Text(
+                        "Mail ile Giriş Butonu",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Text("Facebook buton"),
+                      Text("Gmail buton"),
+                    ],
+                  ),
+                ],
+              ),
             )
           ],
         ),
