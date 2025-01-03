@@ -17,3 +17,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+assets:
+ - robot-2192617_1280.png
